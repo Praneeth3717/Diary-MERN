@@ -1,0 +1,37 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #e3f2fd;
+    color: #333;
+    border-bottom: 1px solid #d1e9ff;
+  }
+  
+  .navbar-title {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .navbar-button {
+    background-color: #64b5f6;
+    color:black;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    border-radius:30px;
+    text-decoration: none;
+  }
+  
+  .navbar-button:hover {
+    background-color: #42a5f5;
+  }
+  .navbar-profile{
+    color: black;
+  }
+.LinktoProfile{
+  text-decoration: none;
+}
+  

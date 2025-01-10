@@ -1,0 +1,45 @@
+.container-body{
+    padding: 20px;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-container {
+    height:fit-content;
+    display: flex;
+    gap:40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    background-image: url('/public/DiaryEntry.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+.card-content h1{
+    color: black;
+}
