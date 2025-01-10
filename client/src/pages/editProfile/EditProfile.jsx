@@ -33,8 +33,8 @@ const EditProfile = () => {
       }
   };
   return (
-    <div>
-      <div className="profile-container">
+    <div className='Edit-profile'>
+      <div className="profile-container-2">
       <h1>Edit Profile</h1>
       <form onSubmit={handleSubmit} className="profile-form">
         <div className="form-group">

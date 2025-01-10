@@ -26,20 +26,20 @@ const ViewDiaryEntry = () => {
   },[urlEntries,setDiaryEntries])
 
   return (
-    <div>
-      <div className="diary-container">
-      <header className="diary-header">
+    <div className='Entries'>
+      <div className="diary-container-2">
+      <header className="diary-header-2">
         <h1>Your Entries</h1>
       </header>
 
-      <div className="entries">
+      <div className="entries-2">
         {DiaryEntries.length === 0 ? (
           <p>No entries yet. Start writing!</p>
         ) : (
           DiaryEntries.map((entry, index) => (
-            <div key={index} className="entry">
-              <p className="entry-text">{entry.text}</p>
-              <span className="entry-date">
+            <div key={index} className="entry-2">
+              <p className="entry-text-2">{entry.text}</p>
+              <span className="entry-date-2">
                 {new Date(entry.createdAt).toLocaleString('en-US', {
                   weekday: 'long',
                   year: 'numeric',
@@ -54,7 +54,7 @@ const ViewDiaryEntry = () => {
         )}
       </div>
 
-      <Link to={`../${userId}/DiaryEntry`} className="navigation-link">Write New Entry</Link>
+      <Link to={`../${userId}/DiaryEntry`} className="navigation-link-2">Write New Entry</Link>
     </div>
     </div>
   )

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import './Profile.css'
-import { Link,useNavigate,useParams} from 'react-router-dom';
+import { Link,useNavigate} from 'react-router-dom';
 import { userContext } from '../../context/context';
 
 
@@ -15,7 +15,8 @@ const Profile = () => {
     navigate('/')
   };
   return (
-    <div className="profile-container">
+    <div className='profile'>
+      <div className="profile-container">
       <div className="profile-header">
         <img
           src="https://via.placeholder.com/150"
@@ -37,8 +38,8 @@ const Profile = () => {
         </div>
         <div className="profile-section">
           <h2>Account Settings</h2>
-          <button className="profile-button"><Link to='./EditProfile'>Edit Profile</Link></button>
-          <button className="profile-button"><Link to='./ChangePassword'>Change Password</Link></button>
+          <Link to='./EditProfile' className="profile-button">Edit Profile</Link>
+          <Link  to='./ChangePassword' className="profile-button">Change Password</Link>
         </div>
         <div className="profile-section">
           <h2>Activity</h2>
@@ -46,6 +47,7 @@ const Profile = () => {
           <p>Recent Activity: Viewed Dashboard</p>
         </div>
       </div>
+    </div>
     </div>
   )
 }

@@ -1,62 +1,116 @@
-.profile-container {
-    max-width: 800px;
-    margin: 20px auto;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .Edit-profile {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
     padding: 20px;
   }
   
-  h1 {
-    font-size: 24px;
-    color: #4caf50;
+  .profile-container-2 {
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #252525;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
+    transition: transform 0.3s ease-in-out, background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profile-container-2:hover {
+    transform: translateY(-5px);
+    background: #2a2a2a;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+  
+  .profile-container-2 h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
     margin-bottom: 20px;
   }
   
   .profile-form {
     display: flex;
     flex-direction: column;
+    gap: 15px;
   }
   
   .form-group {
-    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
   }
   
   .form-group label {
-    display: block;
-    font-size: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
     margin-bottom: 5px;
-    color: #333;
   }
   
   .form-group input,
   .form-group textarea {
     width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .form-group textarea {
-    resize: none;
+  .form-group input:focus,
+  .form-group textarea:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.2);
   }
   
   .profile-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 14px;
-    color: #fff;
-    background-color: #4caf50;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease-in-out;
   }
   
   .profile-button:hover {
-    background-color: #45a049;
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
   }
+  
+  @media (max-width: 768px) {
+    .profile-container-2 {
+      padding: 20px;
+    }
+  
+    .profile-container-2 h1 {
+      font-size: 1.8rem;
+    }
+  
+    .profile-button {
+      font-size: 14px;
+    }
+  
+    .form-group input,
+    .form-group textarea {
+      font-size: 14px;
+    }
+  }
+  

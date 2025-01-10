@@ -14,7 +14,12 @@ function App() {
   const route=createBrowserRouter([
     {
       path: "/",
-      element:<Navbar />
+      element:(
+        <>
+          <Navbar/>
+          <Body/>
+        </>
+      ),
     },
     {
       path: "/:userId",

@@ -1,84 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 .signin-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f8f9fa;
-    padding: 20px;
-    box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #f0f0f0, #ffffff);
+}
+
+.signin-form {
+  width: 100%;
+  max-width: 400px;
+  background: #222;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.signin-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.back {
+  text-align: right;
+}
+
+.back a {
+  color: #bbb;
+  font-size: 22px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.back a:hover {
+  color: #fff;
+}
+
+.signin-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.signin-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ddd;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.signin-input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease-in-out;
+}
+
+.signin-input::placeholder {
+  color: #aaa;
+}
+
+.signin-input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.signin-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.signin-button:hover {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
+  transform: scale(1.05);
+}
+
+.signin-login-prompt {
+  margin-top: 20px;
+}
+
+.signin-login-text {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.signin-login-button {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff416c;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.signin-login-button:hover {
+  color: #ff4b2b;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.signin-form {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
   .signin-form {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    max-width: 350px;
-    text-align: center;
+    padding: 20px;
   }
-  
+
   .signin-title {
-    margin-bottom: 20px;
     font-size: 24px;
-    color: #333;
   }
-  
-  .signin-label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #555;
-  }
-  
-  .signin-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    box-sizing: border-box;
-  }
-  
+
   .signin-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .signin-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .signin-login-prompt {
-    margin-top: 20px;
-  }
-  
-  .signin-login-text {
-    margin: 0;
     font-size: 14px;
-    color: #555;
   }
-  
-  .signin-login-button {
-    background: none;
-    border: none;
-    color: #007bff;
+
+  .signin-input {
     font-size: 14px;
-    cursor: pointer;
-    margin-top: 5px;
-    text-decoration: underline;
-    transition: color 0.3s ease;
   }
-  
-  .signin-login-button:hover {
-    color: #0056b3;
-  }
-  
+}

@@ -1,45 +1,91 @@
-.container-body{
-    padding: 20px;
-    height: 85vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+.container-body {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 .card-container {
-    height:fit-content;
-    display: flex;
-    gap:40px;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
 }
+
 .card {
-    position: relative;
-    width: 250px;
-    height: 150px;
-    background-image: url('/public/DiaryEntry.jpg');
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+  position: relative;
+  width: 280px;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('/public/DiaryEntry.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1); 
+  transition: background 0.3s ease-in-out;
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card:hover::before {
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .card-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-    text-align: center;
+  position: absolute;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 22px;
+  font-weight: bold; 
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-transform: capitalize; 
+  letter-spacing: 1px;
+  transition: transform 0.3s ease-in-out;
 }
 .card-content h1{
-    color: black;
+  color: black;
+  font-size: 22px; 
+  text-transform: capitalize;
+}
+
+.card:hover .card-content {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .container-body {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 320px;
+    height: 190px;
+  }
+
+  .card-content {
+    font-size: 20px;
+  }
 }

@@ -1,37 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #e3f2fd;
-    color: #333;
-    border-bottom: 1px solid #d1e9ff;
-  }
-  
-  .navbar-title {
-    margin: 0;
-    font-size: 24px;
-  }
-  
-  .navbar-button {
-    background-color: #64b5f6;
-    color:black;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    border-radius:30px;
-    text-decoration: none;
-  }
-  
-  .navbar-button:hover {
-    background-color: #42a5f5;
-  }
-  .navbar-profile{
-    color: black;
-  }
-.LinktoProfile{
+  width: 100%;
+  background: #252525;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-title {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.LinktoProfile {
   text-decoration: none;
 }
-  
+
+.navbar-pro {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-pro:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+}
+
+.navbar-pro i {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.navbar-profile {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.navbar-button {
+  padding: 10px 15px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar-button:hover {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .navbar-title {
+    font-size: 1.5rem;
+  }
+
+  .navbar-pro {
+    padding: 8px 12px;
+  }
+
+  .navbar-pro i {
+    font-size: 1.2rem;
+  }
+
+  .navbar-profile {
+    font-size: 0.9rem;
+  }
+
+  .navbar-button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}

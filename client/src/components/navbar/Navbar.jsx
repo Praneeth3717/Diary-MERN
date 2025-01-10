@@ -12,7 +12,7 @@ const Navbar = () => {
         <Link className='LinktoProfile' to='./Profile'>
           <div className='navbar-pro'>
             <i className="fa-solid fa-user"></i>
-            <span className='navbar-profile'> {UserData.name}</span>
+            <p className='navbar-profile'> {UserData.name}</p>
           </div>
         </Link>
         :<Link to='./Signin' className="navbar-button">Sign In</Link>}

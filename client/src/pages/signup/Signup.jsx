@@ -20,7 +20,7 @@ const Signup = () => {
     event.preventDefault()
     const response=await axios.post(url,data)
     if(response.data.success){
-      alert('User redistered successfully')
+      alert('User registered successfully')
       navigate('/Signin')
     }
     else{
