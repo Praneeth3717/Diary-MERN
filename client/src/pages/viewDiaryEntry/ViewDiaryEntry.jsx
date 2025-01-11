@@ -6,7 +6,7 @@ import axios from 'axios'
 
 const ViewDiaryEntry = () => {
   const {userId}=useParams();
-  const urlEntries=`http://localhost:9574/api/diary/getDiaryEntries/${userId}`
+  const urlEntries=`https://diary-mern-backend.onrender.com/api/diary/getDiaryEntries/${userId}`
   const {setDiaryEntries,DiaryEntries}=useContext(userContext)
   useEffect(()=>{
     const getEntries=async()=>{
