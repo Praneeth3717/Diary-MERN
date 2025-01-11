@@ -5,7 +5,7 @@ import axios from 'axios'
 
 const Signup = () => {
   const navigate=useNavigate()
-  const url="http://localhost:9574/api/user/register"
+  const url="https://diary-mern-backend.onrender.com/api/user/register"
   const [data,setdata]=useState({
     name:"",
     email:"",
