@@ -16,8 +16,8 @@ const Signin = () => {
     const value=event.target.value
     setdata(data=>({...data,[name]:value}))
   }
-  const urltoverify="http://localhost:9574/api/user/verifyUser"
-  const urltogetData="http://localhost:9574/api/user/getUser"
+  const urltoverify="https://diary-mern-backend.onrender.com/api/user/verifyUser"
+  const urltogetData="https://diary-mern-backend.onrender.com/api/user/getUser"
   const onLogin=async (event)=>{
     event.preventDefault()
     try {
