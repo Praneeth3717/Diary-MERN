@@ -6,7 +6,7 @@ import { userContext } from '../../context/context.jsx';
 
 const EditProfile = () => {
   const {userId}=useParams()
-  const urlUpdate=`http://localhost:9574/api/user/update/${userId}`
+  const urlUpdate=`https://diary-mern-backend.onrender.com/api/user/update/${userId}`
   const navigate=useNavigate()
   const {UserData,setUserData}=useContext(userContext)
   const [formData, setFormData] = useState({
