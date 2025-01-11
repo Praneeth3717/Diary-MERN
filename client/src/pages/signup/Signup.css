@@ -1,0 +1,87 @@
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+    padding: 20px; /* Added padding to prevent overflow */
+    box-sizing: border-box; /* Ensures padding doesn't affect the container size */
+  }
+  
+  .signup-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px; /* Ensure the form doesn't stretch too wide */
+    text-align: center;
+  }
+  
+  .signup-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .signup-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .signup-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box; /* Ensures padding doesn't affect the input width */
+  }
+  
+  .signup-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-button:hover {
+    background-color: #218838;
+  }
+  
+  .signup-login-prompt {
+    margin-top: 20px;
+  }
+  
+  .signup-login-text {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .signup-login-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 5px;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+  
+  .signup-login-button:hover {
+    color: #0056b3;
+  }
+  
+  .back{
+    width:fit-content;
+  }
