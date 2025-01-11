@@ -21,7 +21,7 @@ const ChangePassword = () => {
             return;
           }
           try {
-            const response=await axios.put(`http://localhost:9574/api/user/updatePass/${userId}`,{...passwordData})
+            const response=await axios.put(`https://diary-mern-backend.onrender.com/api/user/updatePass/${userId}`,{...passwordData})
             if (response.data.success) {
               alert(response.data.message);
             } else {
