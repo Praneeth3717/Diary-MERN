@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const DiaryEntry = () => {
   const {userId}=useParams()
-  const urldiary=`http://localhost:9574/api/diary/writeDiary/${userId}`
+  const urldiary=`https://diary-mern-backend.onrender.com/api/diary/writeDiary/${userId}`
   const [text, setText] = useState('');
 
   const handleAddEntry = async(event) => {
