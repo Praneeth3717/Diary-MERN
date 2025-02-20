@@ -75,10 +75,15 @@
 
 @media (max-width: 768px) {
   .container-body {
-    height: auto;
+    height: 100vh;
     padding: 40px 20px;
   }
-
+  .card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+  }
   .card {
     width: 90%;
     max-width: 320px;
